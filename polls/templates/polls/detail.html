@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote on Poll</title>
+    <link rel="stylesheet" href="{% static 'polls/vote.css' %}">
+</head>
+<body>
+    <div class="poll-container">
+        <form action="{% url 'polls:vote' question.id %}" method="post" class="vote-form">
+            {% csrf_token %}
+            <fieldset class="poll-fieldset">
+                <legend><h1>{{ question.question_text }}</h1></legend>
+                {% if error_message %}
+                    <p class="error-message"><strong>{{ error_message }}</strong></p>
+                {% endif %}
+                {% for choice in question.choice_set.all %}
+                    <div class="choice-container">
+                        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" class="choice-input">
+                        <label for="choice{{ forloop.counter }}" class="choice-label">{{ choice.choice_text }}</label>
+                    </div>
+                {% endfor %}
+            </fieldset>
+            <button type="submit" class="vote-button">Vote</button>
+        </form>
+    </div>
+</body>
+</html>

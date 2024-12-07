@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px 25%;
+}
+
+.poll-list-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.poll-list {
+    list-style: none;
+    padding: 0;
+}
+
+.poll-item {
+    margin-bottom: 10px;
+}
+
+.poll-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.poll-link:hover {
+    text-decoration: underline;
+}
+
+.no-polls {
+    color: #d9534f;
+}

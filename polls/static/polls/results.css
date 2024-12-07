@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px 25%;
+}
+
+.results-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.results-list {
+    list-style: none;
+    padding: 0;
+}
+
+.result-item {
+    margin-bottom: 10px;
+}
+
+.choice-text {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.votes-count {
+    color: #555;
+}
+
+.vote-again {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.vote-again:hover {
+    background-color: #007bff;
+    color: white;
+}
