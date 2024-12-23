@@ -1,6 +1,6 @@
 ### Project of django polls packed in Docker
 
-#### can be opened via localhost:8003/polls/ while container running
+#### can be opened via localhost:8003/polls/ while container is running
 
 #### visuals below:
 
